@@ -52,10 +52,8 @@ def validate_response(correct_value, users_value):                              
 if __name__ == '__main__':
     print('------- Adivinha números -------')                                   #Exibe a mensagem 'Adivinha números'.
     number = generate_number()                                                  #Armazena na variável 'number' os algarismos gerados na função 'generate_number'.
-    print(number)  #apagar depois
     while True:                                                                 #Enquanto for verdadeiro:
         response = get_response()                                               #Armazena a lista de valores do palpite do usuário na variável 'response'.
-        print(response)  #apagar depois
         is_it_finished = validate_response(number, response)                    #Variável 'is_it_finished' recebe o resultado da função 'validate_response', tendo como retorno 0 ou 1.
         if is_it_finished == 1:                                                 #Caso receba '1', o usuário acertou o número e o jogo termina.
             break                                                               #Sai do while.
